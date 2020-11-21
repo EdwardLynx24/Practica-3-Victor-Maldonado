@@ -22,3 +22,7 @@ Route::post('/correo','EmailController@enviarEmail');
 Route::get('/validar/cuenta/{correo}','UserController@verificarCuenta');
 /**Consulta */
 Route::get('/ver/perfil','UserController@verPerfil')->middleware('verificar.rol','auth:sanctum');
+/**PokeApi */
+Route::get('/pokeapi/pokemon','PokeController@consultarPokemon');
+Route::get('/pokeapi/habilidad/','PokeController@habilidadPokemon');
+Route::get('/pokeapi/tipo/pokemon/','Pokecontroller@tipoPokemon');
